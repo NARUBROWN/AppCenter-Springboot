@@ -9,7 +9,7 @@ public interface MemberService {
 
     MemberResponseDTO savedMember(MemberDTO memberDTO);
 
-    MemberResponseDTO changeMember(Long number, String name) throws Exception;
+    MemberResponseDTO changeMemberinfo(Long number, String name) throws Exception;
 
     void deleteMember(Long number) throws Exception;
 }

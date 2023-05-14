@@ -55,12 +55,23 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public MemberResponseDTO changeMember(Long number, String name) throws Exception {
-        return null;
+    public MemberResponseDTO changeMemberinfo(Long number, String name) throws Exception {
+        Member changedMember = memberDAO.updateMember(number, name);
+
+        // DTO 객체에 담아 리턴
+        // DTO 객체 선언
+        MemberResponseDTO memberResponseDTO = new MemberResponseDTO();
+        memberResponseDTO.setNumber(changedMember.getNumber());
+        memberResponseDTO.setName(changedMember.getName());
+        memberResponseDTO.setPassword(changedMember.getPassword());
+        memberResponseDTO.setEmail(changedMember.getEmail());
+
+        return memberResponseDTO;
     }
 
     @Override
     public void deleteMember(Long number) throws Exception {
-
+        // DAO에서 delete 메소드 호출
+        memberDAO.deleteProduct(number);
     }
 }
