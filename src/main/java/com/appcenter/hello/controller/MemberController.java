@@ -2,6 +2,7 @@ package com.appcenter.hello.controller;
 
 import com.appcenter.hello.data.dto.MemberDTO;
 import com.appcenter.hello.data.dto.MemberResponseDTO;
+import com.appcenter.hello.data.dto.ChangeMemberDTO;
 import com.appcenter.hello.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,5 +33,22 @@ public class MemberController {
         MemberResponseDTO memberResponseDTO = memberService.savedMember(memberDTO);
 
         return ResponseEntity.status(HttpStatus.OK).body(memberResponseDTO);
+    }
+
+    @PutMapping()
+    public ResponseEntity<MemberResponseDTO> changeMemberInfo(@RequestBody ChangeMemberDTO changeMemberDTO) throws Exception {
+        MemberResponseDTO memberResponseDTO = memberService.changeMemberinfo(
+                changeMemberDTO.getNumber(),
+                changeMemberDTO.getName()
+        );
+
+        return ResponseEntity.status(HttpStatus.OK).body(memberResponseDTO);
+    }
+
+    @DeleteMapping()
+    public ResponseEntity<String> deleteMember(Long number) throws Exception{
+        memberService.deleteMember(number);
+
+        return ResponseEntity.status(HttpStatus.OK).body("정상적으로 삭제되었습니다.");
     }
 }
