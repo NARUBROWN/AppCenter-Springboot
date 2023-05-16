@@ -1,4 +1,4 @@
-package com.appcenter.hello.config;
+package com.appcenter.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.appcenter.hello"))
+                .apis(RequestHandlerSelectors.basePackage("com.appcenter"))
                 .paths(PathSelectors.any())
                 .build();
     }

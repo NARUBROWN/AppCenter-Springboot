@@ -1,9 +1,9 @@
-package com.appcenter.hello.controller;
+package com.appcenter.controller;
 
-import com.appcenter.hello.data.dto.MemberDTO;
-import com.appcenter.hello.data.dto.MemberResponseDTO;
-import com.appcenter.hello.data.dto.ChangeMemberDTO;
-import com.appcenter.hello.service.MemberService;
+import com.appcenter.data.dto.MemberDTO;
+import com.appcenter.data.dto.response.MemberResponseDTO;
+import com.appcenter.data.dto.request.ChangeMemberDTO;
+import com.appcenter.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

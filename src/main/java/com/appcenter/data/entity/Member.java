@@ -1,4 +1,4 @@
-package com.appcenter.hello.data.entity;
+package com.appcenter.data.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,6 +12,7 @@ public class Member {
     // Id 어노테이션
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "MEMBER_ID")
     private Long number;
 
     @Column(nullable = false)

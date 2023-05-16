@@ -1,4 +1,4 @@
-package com.appcenter.hello.data.dto;
+package com.appcenter.data.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,7 +1,7 @@
-package com.appcenter.hello.service;
+package com.appcenter.service;
 
-import com.appcenter.hello.data.dto.MemberDTO;
-import com.appcenter.hello.data.dto.MemberResponseDTO;
+import com.appcenter.data.dto.MemberDTO;
+import com.appcenter.data.dto.response.MemberResponseDTO;
 
 public interface MemberService {
 
